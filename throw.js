@@ -13,8 +13,8 @@ class Throw{
     fly(){
         this.throw.bodyA=null;
          }
-    Launch(bodyA){
-        this.throw.bodyA=bodyA;
+    Launch(body){
+        this.throw.bodyA=body;
     }     
     display(){
         

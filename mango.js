@@ -7,14 +7,14 @@ class Mango{
         }
         this.body=Bodies.circle(x,y,diameter, option);
         this.diameter=diameter;
-        this.image=loadImage("mango.jpeg")
+        this.image=loadImage("mango.png")
         World.add(world, this.body);
     }
     display(){
        push()
        translate(this.body.position.x, this.body.position.y)
        imageMode(CENTER)
-       image(this.image,50,50,this.diameter)
+       image(this.image,0,0,this.diameter, this.diameter)
        pop()
     }
 }

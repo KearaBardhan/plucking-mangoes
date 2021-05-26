@@ -12,12 +12,13 @@ var mango1,mango2,mango3,mango4,mango5,mango6,mango7,mango8,mango9,mango10
 
 function preload()
 {
-	treeimg=loadImage("tree.jpeg")
-	boyimg=loadImage("boy.jpeg")
+	treeimg=loadImage("tree.png")
+	treeimg.scale=0.5
+	boyimg=loadImage("boy.png")
 }
 
 function setup() {
-	createCanvas(800, 700);
+	createCanvas(1200, 700);
 
 
 	engine = Engine.create();
@@ -100,6 +101,7 @@ function detectCollision(lstones, lmango){
 	mangoBodyPosition=lmango.body.position
 	stonesBodyPosition=lstones.body.position
 	var distance=dist(stonesBodyPosition.x,stonesBodyPosition.y,mangoBodyPosition.x,mangoBodyPosition.y)
+	console.log(lmango.r)
 	if(distance<=lmango.r+lstones.r){
 		Matter.Body.setStatic(lmango.body,false);
 	}
